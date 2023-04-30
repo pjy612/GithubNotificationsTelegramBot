@@ -26,7 +26,7 @@ app
     .UseEndpoints(endpoints =>
     {
         endpoints.MapGet("/", () => "Hello World!");
-        endpoints.MapGitHubWebhooks();
+        endpoints.MapGitHubWebhooks(secret: builder.Configuration.GetValue<string>("GithubSecret")!);
     });
 
 app.Run();
