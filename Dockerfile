@@ -16,3 +16,4 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0
 COPY --from=backend /out /app
 WORKDIR /app
 EXPOSE 80
+EXPOSE 8080
